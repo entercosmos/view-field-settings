@@ -1,10 +1,33 @@
-# ![FieldSettings](https://user-images.githubusercontent.com/44801418/48110644-d4941a80-e27f-11e8-8b34-25f86db21daa.png) FieldSettings
-
-Used for ordering, showing, hiding fields in a view.	
+# ViewFieldSettings
 
 [![npm package][npm-badge]][npm]
 
-## Example
+Used for ordering, showing, hiding fields in a view.	
+
+## Getting started
+
+````
+npm install @cmds/view-field-settings --save
+````
+
+### Prop Types
+
+| Property | Type | Required? | Description |
+|:---|:---|:---:|:---|
+| fields | [Field!]! | ✓ | Unique id for the instance of this foreign record selector |
+| onSort | Function | ✓ | Triggers when the user sorts the fields: `({oldIndex: number, newIndex: number})` |
+| onShowOrHide | Function | ✓ | Triggers when the user hide or shows a field: `({id: string, visibility: boolean})` |
+| onShowOrHideAll | Function | ✓ | Triggers when the user hide or shows all fields: `({visibility: boolean})` |
+
+#### Field
+
+| Property | Type | Required? | Description |
+|:---|:---|:---:|:---|
+| id | ID | ✓ | Field ID |
+| name | String | ✓ | Name of the field |
+| visibility | Boolean | ✓ | Whether or not it is visible |
+
+### Example
 
 ````jsx harmony
 <FieldSettings 
@@ -33,5 +56,10 @@ Used for ordering, showing, hiding fields in a view.
 />
 ````
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.com/package/@cmds/field-settings
+### More information
+
+This component is designed and developed as part of [Cosmos Design System][cmds]. 
+
+[cmds]: https://github.com/entercosmos/cosmos
+[npm-badge]: https://img.shields.io/npm/v/@cmds/view-field-settings.svg
+[npm]: https://www.npmjs.org/package/@cmds/view-field-settings

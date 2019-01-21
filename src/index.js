@@ -1,9 +1,23 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import FieldContainer from './FieldContainer'
 import Field from './Field'
 import {css} from 'emotion'
 
 export default class FieldSettings extends React.Component {
+
+    static propTypes = {
+        fields: PropTypes.arrayOf(
+            PropTypes.shape({
+                id: PropTypes.string.isRequired,
+                name: PropTypes.string.isRequired,
+                visibility: PropTypes.bool.isRequired,
+            })
+        ),
+        onSort: PropTypes.func.isRequired,
+        onShowOrHide: PropTypes.func.isRequired,
+        onShowOrHideAll: PropTypes.func.isRequired
+    }
 
     render() {
 
