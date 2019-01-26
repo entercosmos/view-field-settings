@@ -1,5 +1,7 @@
 # ViewFieldSettings
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/entercosmos/view-field-settings.svg)](https://greenkeeper.io/)
+
 [![npm package][npm-badge]][npm]
 
 Used for ordering, showing, hiding fields in a view.	
